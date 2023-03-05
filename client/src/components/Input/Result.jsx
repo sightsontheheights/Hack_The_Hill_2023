@@ -31,7 +31,6 @@ const Result = ({results}) => {
 
     return (
       <div>
-      Result
       <p>
         "Paste your email here."
       </p>

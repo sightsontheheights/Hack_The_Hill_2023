@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      </header>
         <div className="container">
         <main>
           <Input />
@@ -14,7 +15,7 @@ function App() {
 
         <Menu />
         </div>
-      </header>
+      
     </div>
   );
 }
