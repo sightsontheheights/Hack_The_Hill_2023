@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Result from "./Result";
 import axios from "axios";
+import { FaArrowAltCircleRight } from 'react-icons/fa';
 
 const Input = () => {
  const [message, setMessage] = useState('');
@@ -25,15 +26,21 @@ const Input = () => {
 
  return (
    <div>
-     <input
-       type="text"
-       id="message"
-       name="message"
-       onChange={handleChange}
-       value={message}
-     />
-
-     <button onClick={handleClick}>Update</button>
+<textarea
+                className='emailInput'
+                type='text'
+                id='message'
+                name='message'
+                placeholder='Insert email body...'
+                onChange={handleChange}
+                value={message}
+            />
+            <a onClick={handleClick}>
+                <div className='buttonStyle' id='uploadBtn'>
+                    <FaArrowAltCircleRight style={{ marginTop: 20 }} />{' '}
+                    <span>Upload</span>
+                </div>
+            </a>
 
      <Result results={results}/>
    </div>

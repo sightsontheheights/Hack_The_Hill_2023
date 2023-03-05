@@ -13,18 +13,18 @@ app.use(express.json());
 
 app.post("/submit", (req,res)=>{
   console.log(req.body);
-  res.send( {"result":{percentage:87,URLisScam:true, BodyisSpam:5}});
+  res.send( {"result":{percentage:100,URLisScam:true, BodyisSpam:6}});
 });
 
-function handleSubmit(req, res) {
+// function handleSubmit(req, res) {
 
 
-  // console.log(res);
-  // console.log("test");
-  res.send();
-  console.log(res.body);
+//   // console.log(res);n
+//   // console.log("test");
+//   res.send();
+//   console.log(res.body);
   
-  return { result: { percentage: 87, URLisScam: true, BodyisSpam: true } };
-}
+//   return { result: { percentage: 87, URLisScam: true, BodyisSpam: true } };
+// }
 app.listen(3005);
 console.log("Server listening on port 3005");

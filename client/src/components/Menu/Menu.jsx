@@ -1,10 +1,11 @@
 import React from "react";
-import logo from ".//phishing_pole.png";
-
-const Menu = () => {
+import myImg from '../../logo.png';
+const Menu = (image) => {
+  //console.log(logo);
   return (
     <div className="menu">
-      <img src={logo} alt="app logo"/>
+
+      <img src={myImg} width={"150px"}></img>
       <div className="menu-title">Phishing Pole</div>
       <div className="menu-item">Dark Mode</div>
       <div className="menu-item">FAQs</div>

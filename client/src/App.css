@@ -4,7 +4,6 @@ body {
   padding: 40px;
   font-family: Arial;
   font-size: 1.2em;
-  text-align: center;
 }
 
 .container {
@@ -13,12 +12,44 @@ body {
 
 main {
   background-color: #fff;
+  padding: 50px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.emailInput {
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  resize: none;
+  font-size: 1.3em;
+
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.buttonStyle {
+  display: block;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #007ea7;
+}
+
+.buttonStyle span {
+  position: relative;
+  top: -3px;
 }
 
 .menu {
-  background: #007EA7;
+  background: #007ea7;
   border-radius: 12px;
   padding: 30px;
+  margin: 30px;
 }
 
 .menu-title {
@@ -27,8 +58,7 @@ main {
   font-weight: 700;
   font-size: 38px;
   line-height: 46px;
-  
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .menu-item {
@@ -37,6 +67,5 @@ main {
   font-weight: 50;
   font-size: 32px;
   line-height: 39px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
-
