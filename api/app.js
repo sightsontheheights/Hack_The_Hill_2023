@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.post("/submit", (req,res)=>{
   console.log(req.body);
-  res.send();
+  res.send( {"result":{percentage:87,URLisScam:true, BodyisSpam:5}});
 });
 
 function handleSubmit(req, res) {

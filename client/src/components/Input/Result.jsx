@@ -1,5 +1,10 @@
 import React from "react";
-const Result = () => {
+const Result = ({results}) => {
+  console.log(results);
+  var State;
+  if(results=" "){
+
+  }
   return (
     <div>
       Result

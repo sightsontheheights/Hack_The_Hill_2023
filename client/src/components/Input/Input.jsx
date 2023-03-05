@@ -1,27 +1,15 @@
 import React, { useState, useEffect } from "react";
+import Result from "./Result";
 import axios from "axios";
 
 const Input = () => {
  const [message, setMessage] = useState('');
-
  const [updated, setUpdated] = useState(message);
+ const [results, setResults] = useState(" ");
 
  const handleChange = (event) => {
    setMessage(event.target.value);
  };
-
-  //   useEffect(() => {
-  //     axios.post('https://localhost:3005/submit', null, {
-  //       result: message
-  //     })
-  //     .then((response) => {
-  //       console.log(response.data);
-  //         // Handle data
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     })
-  //     }, []);
 
   const handleClick = async (event)=> {
     event.preventDefault(); // prevent page reload
@@ -29,10 +17,11 @@ const Input = () => {
     const serverData = {
       result: message,
     };
-    axios.post("http://localhost:3005/submit", serverData).then((response) => {
+    await axios.post("http://localhost:3005/submit", serverData).then((response) => {
       console.log(response);
+      setResults(response.data.result);
     });
-};
+  };
 
  return (
    <div>
@@ -45,6 +34,8 @@ const Input = () => {
      />
 
      <button onClick={handleClick}>Update</button>
+
+     <Result results={results}/>
    </div>
  );
 };

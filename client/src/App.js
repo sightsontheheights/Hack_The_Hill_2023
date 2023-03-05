@@ -1,4 +1,4 @@
-import Result from "./components/Result/Result";
+
 import Menu from "./components/Menu/Menu";
 import Input from "./components/Input/Input";
 import "./App.css";
@@ -10,7 +10,6 @@ function App() {
         <div className="container">
         <main>
           <Input />
-          <Result />
         </main>
 
         <Menu />
