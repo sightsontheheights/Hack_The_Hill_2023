@@ -1,29 +1,28 @@
 :root {
-  --mainTextColor-dark: black ;
+  --mainTextColor-dark: black;
   --secondaryTextColor-light: white;
   --linkTextColor-light: #ff764c;
   --contrastTextColor-light: white;
   --mainBgColor-light: #f3f3f3;
   --secondaryBgColor-light: white;
-  --textBgColor-light: #FAFAFA;
-  --contrastBgColor-light: #007EA7;
+  --textBgColor-light: #fafafa;
+  --contrastBgColor-light: #007ea7;
 
-  --mainTextColor-dark: white ;
+  --mainTextColor-dark: white;
   --secondaryTextColor-dark: #333333;
   --linkTextColor-dark: #00a6ff;
   --contrastTextColor-dark: white;
-  --mainBgColor-dark: #00171F;
+  --mainBgColor-dark: #00171f;
   --secondaryBgColor-dark: #003459;
   --textBgColor-dark: white;
-  --contrastBgColor-dark: #00171F;
+  --contrastBgColor-dark: #00171f;
 }
 
-.container{
+.container {
   margin-top: 80px;
   padding: auto;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   justify-content: center;
-  
 }
 
 .theme-light {
@@ -54,11 +53,10 @@ html {
   scroll-behavior: smooth;
 }
 
-*{
-  font-family: 'Poppins', sans-serif;
+* {
+  font-family: "Poppins", sans-serif;
   transition: 0.2s;
-  font-size: 1em;
-  
+  /* font-size: 1em; */
 }
 
 body {
@@ -125,7 +123,7 @@ main {
   font-weight: 700;
   font-size: 1.5em;
   line-height: 46px;
-  color: var(--contrastTextColor)
+  color: var(--contrastTextColor);
 }
 
 .menu-item {
@@ -134,7 +132,7 @@ main {
   font-weight: 50;
   font-size: 1em;
   line-height: 39px;
-  color: var(--contrastTextColor)
+  color: var(--contrastTextColor);
 }
 
 .menu-item > a:hover {
@@ -145,3 +143,7 @@ main {
   margin: 10px 30px;
 }
 
+.flagOutput {
+  background-color: #d0eaf3;
+  padding: 18px;
+}
