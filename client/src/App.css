@@ -1,9 +1,71 @@
+:root {
+  --mainTextColor-dark: black ;
+  --secondaryTextColor-light: white;
+  --linkTextColor-light: #ff764c;
+  --contrastTextColor-light: white;
+  --mainBgColor-light: #f3f3f3;
+  --secondaryBgColor-light: white;
+  --textBgColor-light: #FAFAFA;
+  --contrastBgColor-light: #007EA7;
+
+  --mainTextColor-dark: white ;
+  --secondaryTextColor-dark: #333333;
+  --linkTextColor-dark: #00a6ff;
+  --contrastTextColor-dark: white;
+  --mainBgColor-dark: #00171F;
+  --secondaryBgColor-dark: #003459;
+  --textBgColor-dark: white;
+  --contrastBgColor-dark: #00171F;
+}
+
+.container{
+  margin-top: 80px;
+  padding: auto;
+  flex-wrap:wrap;
+  justify-content: center;
+  
+}
+
+.theme-light {
+  --mainTextColor: var(--mainTextColor-light);
+  --secondaryTextColor: var(--secondaryTextColor-light);
+  --linkTextColor: var(--linkTextColor-light);
+  --contrastTextColor: var(--contrastTextColor-light);
+  --mainBgColor: var(--mainBgColor-light);
+  --secondaryBgColor: var(--secondaryBgColor-light);
+  --textBgColor: var(--textBgColor-light);
+  --contrastBgColor: var(--contrastBgColor-light);
+  --textColor: black;
+}
+
+.theme-dark {
+  --mainTextColor: var(--mainTextColor-dark);
+  --secondaryTextColor: var(--secondaryTextColor-dark);
+  --linkTextColor: var(--linkTextColor-dark);
+  --contrastTextColor: var(--contrastTextColor-dark);
+  --mainBgColor: var(--mainBgColor-dark);
+  --secondaryBgColor: var(--secondaryBgColor-dark);
+  --textBgColor: var(--textBgColor-dark);
+  --contrastBgColor: var(--contrastBgColor-dark);
+  --textAreaColor: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+  transition: 0.2s;
+  font-size: 1em;
+  
+}
+
 body {
-  background-color: #fafafa;
-  color: #000000;
+  background-color: var(--secondaryBgColor);
+  color: var(--mainTextColor);
   padding: 40px;
   font-family: Arial;
-  font-size: 1.2em;
 }
 
 .container {
@@ -11,15 +73,17 @@ body {
 }
 
 main {
-  background-color: #fff;
+  background-color: var(--mainBgColor);
   padding: 50px;
   border-radius: 5px;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  width: 50%;
 }
 
 .emailInput {
-  background-color: #f2f2f2;
+  background-color: var(--textBgColor);
+  color: var(--textAreaColor);
   width: 100%;
   height: 150px;
   padding: 12px 20px;
@@ -28,16 +92,19 @@ main {
   border-radius: 4px;
   resize: none;
   font-size: 1.3em;
-
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.emailInput::placeholder {
+  color: black;
 }
 
 .buttonStyle {
   display: block;
   cursor: pointer;
   font-size: 1.1em;
-  color: #007ea7;
+  color: var(--linkTextColor);
 }
 
 .buttonStyle span {
@@ -46,26 +113,35 @@ main {
 }
 
 .menu {
-  background: #007ea7;
+  background: var(--contrastBgColor);
   border-radius: 12px;
   padding: 30px;
-  margin: 30px;
+  margin-left: 30px;
 }
 
 .menu-title {
   text-align: center;
   font-style: normal;
   font-weight: 700;
-  font-size: 38px;
+  font-size: 1.5em;
   line-height: 46px;
-  color: #ffffff;
+  color: var(--contrastTextColor)
 }
 
 .menu-item {
   text-align: left;
   font-style: normal;
   font-weight: 50;
-  font-size: 32px;
+  font-size: 1em;
   line-height: 39px;
-  color: #ffffff;
+  color: var(--contrastTextColor)
 }
+
+.menu-item > a:hover {
+  color: var(--linkTextColor);
+}
+
+.menu-logo {
+  margin: 10px 30px;
+}
+
