@@ -27,7 +27,7 @@ const Input = () => {
     event.preventDefault(); // prevent page reload
     setUpdated(message);
     const serverData = {
-      results: message,
+      result: message,
     };
     axios.post("http://localhost:3005/submit", serverData).then((response) => {
       console.log(response);
