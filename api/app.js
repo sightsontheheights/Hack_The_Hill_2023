@@ -3,21 +3,28 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+var cors = require("cors");
 
 var app = express();
 
+app.use(cors());
 app.use(logger("dev"));
 app.use(express.json());
 
-app.post("/submit", handleSubmit);
+app.post("/submit", (req,res)=>{
+  console.log(req.body);
+  res.send();
+});
 
-async function handleSubmit(req, res) {
-  let a = await new Promise((resolve) => {
-    setTimeout(() => {
-      resolve("");
-    }, 2000);
-  });
-  return { result: { percentage: 0.87, URLisScam: true, BodyisSpam: true } };
+function handleSubmit(req, res) {
+
+
+  // console.log(res);
+  // console.log("test");
+  res.send();
+  console.log(res.body);
+  
+  return { result: { percentage: 87, URLisScam: true, BodyisSpam: true } };
 }
 app.listen(3005);
 console.log("Server listening on port 3005");

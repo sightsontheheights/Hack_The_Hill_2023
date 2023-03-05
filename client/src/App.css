@@ -3,8 +3,12 @@ body {
   color: #000000;
   padding: 40px;
   font-family: Arial;
-  font-size: 69px;
+  font-size: 1.2em;
   text-align: center;
+}
+
+.container {
+  display: flex;
 }
 
 main {
@@ -12,6 +16,27 @@ main {
 }
 
 .menu {
-  background-color: #007ea7;
-  color: #fff;
+  background: #007EA7;
+  border-radius: 12px;
+  padding: 30px;
 }
+
+.menu-title {
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  
+  color: #FFFFFF;
+}
+
+.menu-item {
+  text-align: left;
+  font-style: normal;
+  font-weight: 50;
+  font-size: 32px;
+  line-height: 39px;
+  color: #FFFFFF;
+}
+
