@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Result from "./Result";
 import axios from "axios";
-import { FaArrowAltCircleRight } from 'react-icons/fa';
+import { FcRightUp2 } from 'react-icons/fc';
+
 
 const Input = () => {
  const [message, setMessage] = useState('');
@@ -37,11 +38,11 @@ const Input = () => {
             />
             <a onClick={handleClick}>
                 <div className='buttonStyle' id='uploadBtn'>
-                    <FaArrowAltCircleRight style={{ marginTop: 20 }} />{' '}
+                    <FcRightUp2 style={{ marginTop: 20 }} />{' '}
                     <span>Upload</span>
                 </div>
             </a>
-
+            <br></br>
      <Result results={results}/>
    </div>
  );

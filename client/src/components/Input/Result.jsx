@@ -1,4 +1,7 @@
 import React from "react";
+import { AiOutlineExclamationCircle } from 'react-icons/ai';
+import Flag from "../Flag/Flag";
+
 const Result = ({results}) => {
   console.log(results);
   var State;
@@ -31,9 +34,12 @@ const Result = ({results}) => {
 
     return (
       <div>
+        
+      
       <p>
         "Paste your email here."
       </p>
+      
     </div>
     )
 
@@ -42,10 +48,12 @@ const Result = ({results}) => {
 
     return (
       <div>
-      Result
+      Analysis
       <p>
       No Caution - This email appears to be safe, and there are no known security issues or concerns associated with it.
       </p>
+      <Flag prop={2}></Flag><Flag prop={2}></Flag> No Spam Content Detected <br></br>
+      <Flag prop={2}></Flag><Flag prop={2}></Flag> No Malicious URL's Detected <br></br>
     </div>
     )
 
@@ -54,10 +62,12 @@ const Result = ({results}) => {
 
     return (
       <div>
-      Result
+      Analysis
       <p>
       This email is most likely safe, with little to no minor security issues or concerns that you should be aware of.
       </p>
+      <Flag prop={3}></Flag> Potential Spam Content Detected <br></br>
+      <Flag prop={2}></Flag> No Malicious URL's Detected <br></br>
     </div>
     )
 
@@ -66,10 +76,12 @@ const Result = ({results}) => {
 
     return (
       <div>
-      Result
+      Analysis
       <p>
       Moderate Caution - This email has very few potential security risks, but you do not need to exercise caution before opening any links or attachments.
       </p>
+      <Flag prop={3}></Flag> Potential Spam Content Detected <br></br>
+      <Flag prop={2}></Flag> No Malicious URL's Detected <br></br>
     </div>
     )
 
@@ -79,10 +91,12 @@ const Result = ({results}) => {
 
     return (
       <div>
-      Result
+      Analysis
       <p>
       Moderately High Caution - This email has a few security risks, and it is likely a spam email.
       </p>
+      <Flag prop={1}></Flag> Spam Content Detected <br></br>
+      <Flag prop={2}></Flag> No Malicious URL's Detected <br></br>
     </div>
     )
 
@@ -92,10 +106,13 @@ const Result = ({results}) => {
 
     return (
       <div>
-      Result
+    
+      Analysis
       <p>
-      Severe Caution - This email is highly suspicious, and you should not open any links or attachments until you have thoroughly investigated the source and content of the email, it is also likely a spam phising email.
+      Severe Caution - This email is highly suspicious, and you should not open any links or attachments until you have thoroughly investigated the source and content of the email, it is also likely a spam phishing email.
       </p>
+      <Flag prop={1}></Flag> Spam Content Detected <br></br>
+      <Flag prop={1}></Flag> Malicious URL's Detected <br></br>
     </div>
     )
 
@@ -104,10 +121,12 @@ const Result = ({results}) => {
 
     return (
       <div>
-      Result
+      Analysis
       <p>
-      Critical Caution - This email contains a confirmed threat, and you should delete it immediately without opening any links or attachments, it is highly likely to be a spam phising email.
+      Critical Caution - This email contains a confirmed threat, and you should delete it immediately without opening any links or attachments, it is highly likely to be a spam phishing email.
       </p>
+      <Flag prop={1}></Flag> Spam Content Detected <br></br>
+      <Flag prop={1}></Flag> Malicious URL's Detected <br></br>
     </div>
     )
 
@@ -117,10 +136,12 @@ const Result = ({results}) => {
 
     return (
       <div>
-      Result
+      Analysis
       <p>
-      Extreme Caution - This email poses an imminent threat, and you should report it to your email provider, IT department or cybersecurity team immediately, it is a confirmed spam phising email.
+      Extreme Caution - This email poses an imminent threat, and you should report it to your email provider, IT department or cybersecurity team immediately, it is a confirmed spam phishing email.
       </p>
+      <Flag prop={1}></Flag><Flag prop={1}></Flag> Spam Content Detected <br></br>
+      <Flag prop={1}></Flag><Flag prop={1}></Flag> Malicious URL's Detected <br></br>
     </div>
     )
 
