@@ -54,7 +54,7 @@ async function testURL(str){
     url: 'https://exerra-phishing-check.p.rapidapi.com/',
     params: {url: `${url}`},
     headers: {
-        'X-RapidAPI-Key': 'b908a3b636msh75c74d7a9bb8ec1p1d9921jsnd8b467f499b0',
+        'X-RapidAPI-Key': '',
         'X-RapidAPI-Host': 'exerra-phishing-check.p.rapidapi.com'
     }
     };
@@ -65,7 +65,7 @@ async function testURL(str){
         url: 'https://oopspam.p.rapidapi.com/v1/spamdetection',
         headers: {
         'content-type': 'application/json',
-        'X-RapidAPI-Key': 'c565884f46msh5598e5d8176f464p1280e7jsnbf1faaeb1837',
+        'X-RapidAPI-Key': '',
         'X-RapidAPI-Host': 'oopspam.p.rapidapi.com'
         },
         data: `{"checkForLength":true,"content":"${str}"}`
