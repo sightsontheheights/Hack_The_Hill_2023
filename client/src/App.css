@@ -1,0 +1,17 @@
+body {
+  background-color: #fafafa;
+  color: #000000;
+  padding: 40px;
+  font-family: Arial;
+  font-size: 69px;
+  text-align: center;
+}
+
+main {
+  background-color: #fff;
+}
+
+.menu {
+  background-color: #007ea7;
+  color: #fff;
+}

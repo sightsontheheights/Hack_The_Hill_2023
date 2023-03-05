@@ -1,11 +1,17 @@
-import Main from "./components/Main/Main";
+import Result from "./components/Result/Result";
 import Menu from "./components/Menu/Menu";
+import Input from "./components/Input/Input";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Main />
+        <main>
+          <Input />
+          <Result />
+        </main>
+
         <Menu />
       </header>
     </div>
