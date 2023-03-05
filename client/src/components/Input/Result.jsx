@@ -64,9 +64,9 @@ const Result = ({results}) => {
       <div>
       Analysis
       <p>
-      This email is most likely safe, with little to no minor security issues or concerns that you should be aware of.
+      This email is mostly safe, with little minor security issues or concerns that you should be aware of.
       </p>
-      <Flag prop={3}></Flag> Potential Spam Content Detected <br></br>
+      <Flag prop={2}></Flag> No Spam Content Detected <br></br>
       <Flag prop={2}></Flag> No Malicious URL's Detected <br></br>
     </div>
     )
