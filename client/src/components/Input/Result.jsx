@@ -34,11 +34,8 @@ const Result = ({results}) => {
 
     return (
       <div>
-<<<<<<< HEAD
-=======
         
       
->>>>>>> added flags display
       <p>
         "Paste your email here."
       </p>
