@@ -1,18 +1,19 @@
 const fs = require('fs');
 
-const key = fs.readFileSync('./key.pem');
+//const key = fs.readFileSync('./key.pem');
 
-const cert = fs.readFileSync('./cert.pem');
+//const cert = fs.readFileSync('./cert.pem');
 
 const express = require('express');
 
 const https = require('https');
 const axios = require('axios');
+var cors = require("cors");
 
 const app = express();
 
-const server = https.createServer({key: key, cert: cert }, app);
-
+//const server = https.createServer({key: key, cert: cert }, app);
+app.use(cors());
 app.use(express.json());
 app.post('/submit', async (req, res) => { 
     console.log(req.body.result);
@@ -24,17 +25,18 @@ app.post('/submit', async (req, res) => {
     res.send(finalJson);
 });
 
-server.listen(3002, () => { console.log('listening on 3001 here') });
+app.listen(3005, () => { console.log('listening on 3005 here') });
 
 
 
 
 async function testURL(str){
+  console.log(str);
     var urlInText = false;
     var urlRegex = /(https?:\/\/[^ ]*)/;
 
     var input = str;
-    console.log(input.match(urlRegex));
+    //console.log(input.match(urlRegex));
     if(input.match(urlRegex)==null){
       urlInText=false;
       var url="";
