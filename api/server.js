@@ -31,6 +31,8 @@ app.listen(3005, () => { console.log('listening on 3005 here') });
 
 
 async function testURL(str){
+  
+  str = str.replace(/(\r\n|\n|\r)/gm, "");
   console.log(str);
     var urlInText = false;
     var urlRegex = /(https?:\/\/[^ ]*)/;
@@ -63,7 +65,7 @@ async function testURL(str){
         url: 'https://oopspam.p.rapidapi.com/v1/spamdetection',
         headers: {
         'content-type': 'application/json',
-        'X-RapidAPI-Key': '1cbbdb29bbmsh7980e239c22a5fep1805bcjsn2ae1cccad968',
+        'X-RapidAPI-Key': 'c565884f46msh5598e5d8176f464p1280e7jsnbf1faaeb1837',
         'X-RapidAPI-Host': 'oopspam.p.rapidapi.com'
         },
         data: `{"checkForLength":true,"content":"${str}"}`
@@ -110,27 +112,27 @@ async function testURL(str){
           urlWeight = 0;
         }
         if (spamScore === 1 && !isUrlMalicious) {
-          spamWeight = 5;
-          urlWeight = 0.3;
+          spamWeight = 30;
+          urlWeight = 0;
         }
         if (spamScore === 2 && !isUrlMalicious) {
-          spamWeight = 5;
-          urlWeight = 0.3;
+          spamWeight = 10;
+          urlWeight = 0;
         }
         if (spamScore === 3 && !isUrlMalicious) {
-          spamWeight = 4;
-          urlWeight = 0.3;
+          spamWeight = 20;
+          urlWeight = 0;
         }
         if (spamScore === 4 && !isUrlMalicious) {
-          spamWeight = 4;
-          urlWeight = 0.3;
+          spamWeight = 18;
+          urlWeight = 0;
         }
         if (spamScore === 5 && !isUrlMalicious) {
-          spamWeight = 4;
+          spamWeight = 17;
           urlWeight = 0;
         }
         if (spamScore === 6 && !isUrlMalicious) {
-          spamWeight = 5;
+          spamWeight = 15;
           urlWeight = 0;
         }
         if (spamScore === 0 && isUrlMalicious) {
